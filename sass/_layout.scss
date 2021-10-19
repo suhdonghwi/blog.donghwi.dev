@@ -18,6 +18,9 @@ body {
 
   margin: 0 auto;
   padding: 2rem 1rem;
+
+  // to prevent highlighted text spanning entire width of the page
+  position: relative;
 }
 
 .separator {
