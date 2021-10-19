@@ -2,5 +2,15 @@
 
 <!-- -->
 {% block content %}
-<h1 class="blog-title"><em>(show . head)</em> donghwi</h1>
+<header class="header">
+  <h1 class="header__title">blog = (print . head) donghwi</h1>
+  <pre class="header__bio">
+donghwi = { 
+  image = <img class="header__profile" src="{{ get_url(path="images/profile.jpg") | safe }}"/>,
+  github = "https://github.com/suhdonghwi",
+  email = "hwidongsuh@gmail.com",
+} :: Person
+</pre
+  >
+</header>
 {% endblock content %}
