@@ -1,0 +1,26 @@
+.header {
+  &__title,
+  &__bio {
+    color: $oc-gray-5;
+
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-size: 1.3rem;
+
+    line-height: 2rem;
+
+    em {
+      color: $oc-gray-7;
+
+      font-style: normal;
+      font-weight: 500;
+    }
+  }
+
+  &__profile {
+    width: 2rem;
+    height: 2rem;
+
+    vertical-align: middle;
+  }
+}
