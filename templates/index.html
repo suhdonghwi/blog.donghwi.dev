@@ -3,14 +3,13 @@
 <!-- -->
 {% block content %}
 <header class="header">
-  <h1 class="header__title">blog = (print . head) donghwi</h1>
+  <h1 class="header__title"><em>blog = </em>(print . head) donghwi</h1>
   <pre class="header__bio">
-donghwi = { 
-  image = <img class="header__profile" src="{{ get_url(path="images/profile.jpg") | safe }}"/>,
+<em>donghwi = </em>{ 
+  appearance = <img class="header__profile" src="{{ get_url(path="images/profile.jpg") | safe }}"/>,
   github = "https://github.com/suhdonghwi",
   email = "hwidongsuh@gmail.com",
-} :: Person
-</pre
-  >
+} <em>:: Person</em>
+</pre>
 </header>
 {% endblock content %}
