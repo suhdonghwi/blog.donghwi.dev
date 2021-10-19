@@ -1,15 +1,6 @@
 @import "common/variables";
 @import "common/fonts";
 
-html {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", sans-serif;
-
-  color: $oc-gray-9;
-  background-color: $oc-white;
-}
-
 @import "layout";
 
 @import "components/header";
