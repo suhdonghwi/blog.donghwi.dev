@@ -3,21 +3,23 @@
 <!-- -->
 {% block content %}
 <header class="header">
-  <h1 class="header__title"><em>blog = </em>(print . head) donghwi</h1>
+  <div class="header__title"><em>blog = </em>(print . head) donghwi</div>
   <pre class="header__bio">
 <em>donghwi = </em>{ 
   appearance = <img class="header__profile" src="{{ get_url(path="images/profile.jpg") | safe }}"/>,
-  github = "https://github.com/suhdonghwi",
-  email = "hwidongsuh@gmail.com",
+  github = <a class="header__link" href="https://github.com/suhdonghwi">"suhdonghwi"</a>,
+  email = <a class="header__link" href="mailto:hwidongsuh@gmail.com">"hwidongsuh@gmail.com"</a>
 } <em>:: Person</em>
 </pre>
 </header>
 
 <main>
+  <!--
   <ol class="posts">
     {% for post in section.pages %}
     <li class="post">{{ post.title }}</li>
     {% endfor %}
   </ol>
+  -->
 </main>
 {% endblock content %}
