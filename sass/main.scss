@@ -1,5 +1,33 @@
 @import "variables";
+@import "fonts";
+
+html {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", sans-serif;
+  color: $oc-gray-9;
+  background-color: $oc-gray-0;
+}
 
 body {
-  background-color: $oc-blue-4;
+}
+
+.container {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.blog-title {
+  color: $oc-gray-5;
+
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-size: 1.5rem;
+
+  em {
+    color: $oc-gray-9;
+
+    font-style: normal;
+    font-weight: 500;
+  }
 }
