@@ -13,8 +13,8 @@ build_search_index = false
 highlight_code = true
 highlight_theme = "css"
 highlight_themes_css = [
-  { theme = "base16-eighties-dark", filename = "syntax-theme-dark.css" },
-  { theme = "base16-eighties-light", filename = "syntax-theme-light.css" },
+  { theme = "base16-ocean-dark", filename = "syntax-theme-dark.css" },
+  { theme = "base16-ocean-light", filename = "syntax-theme-light.css" },
 ]
 
 [extra]
