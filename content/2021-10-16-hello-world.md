@@ -11,7 +11,7 @@ description = "다양한 요소들을 테스트 하기 위한 시험용 포스�
 
 I'll update this post over and over during my journey with zola. But for now, I'll just provide some links:
 
-- the theme I use [`dose`](https://github.com/oltd/dose)
+- the theme I use [dose](https://github.com/oltd/dose)
 - zola itself [on Github](https://github.com/getzola/zola) or [their site](https://www.getzola.org/)
 
 And some code:

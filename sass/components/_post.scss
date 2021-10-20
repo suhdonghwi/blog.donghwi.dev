@@ -1,13 +1,13 @@
 .post {
-  p,
-  li {
-    font-size: 1rem;
-    line-height: 1.8rem;
-  }
+  font-size: 1rem;
+  line-height: 1.8rem;
 
   &__date {
+    display: block;
     font-size: 1rem;
     color: $text-secondary;
+
+    line-height: 1rem;
   }
 
   &__header {
@@ -23,5 +23,19 @@
 
   img {
     width: 100%;
+  }
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      text-indent: -5px;
+
+      &:before {
+        content: "− ";
+        text-indent: -5px;
+      }
+    }
   }
 }
