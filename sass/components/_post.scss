@@ -25,17 +25,15 @@
     width: 100%;
   }
 
-  ul {
-    margin: 0;
-    list-style-type: none;
-
-    li {
-      text-indent: -5px;
-
-      &:before {
-        content: "− ";
-        text-indent: -5px;
-      }
+  blockquote {
+    p {
+      margin: 0;
     }
+
+    margin: 1.5rem 0 1.5rem 1rem;
+    padding: 0.5rem 0 0.5rem 1.25rem;
+
+    border-left: 4px solid $text-primary;
+    font-style: italic;
   }
 }

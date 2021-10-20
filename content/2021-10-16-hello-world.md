@@ -7,12 +7,16 @@ description = "다양한 요소들을 테스트 하기 위한 시험용 포스�
 
 졸라[^zolawebsite]는 제가 해커뉴스를 통해 발견한 물건이고, 이 사이트를 만들기 전까지 탭에 남겨두었습니다. 러스트로 작성되었고, 커스텀할 수 있는 다양한 옵션들이 있습니다. (복잡하지도 않고 심플합니다.)
 
-> 이것은 화려한 인용구 "This is a fancy quote"
+> 이것은 화려한 인용구<br/>
+> "This is a fancy quote"
 
 I'll update this post over and over during my journey with zola. But for now, I'll just provide some links:
 
-- the theme I use [dose](https://github.com/oltd/dose)
-- zola itself [on Github](https://github.com/getzola/zola) or [their site](https://www.getzola.org/)
+- 순서 없는
+- 리스트
+
+1. 이건
+2. 순서있는 리스트
 
 And some code:
 
