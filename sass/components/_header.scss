@@ -1,4 +1,22 @@
 .header {
+  &__title {
+    a {
+      color: $text-secondary;
+      text-decoration: none;
+    }
+  }
+
+  &__bio {
+    a {
+      color: $text-secondary;
+      transition: color 0.1s;
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+
   &__title,
   &__bio {
     color: $text-secondary;
