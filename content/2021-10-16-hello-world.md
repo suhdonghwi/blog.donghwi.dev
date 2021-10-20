@@ -18,14 +18,16 @@ I'll update this post over and over during my journey with zola. But for now, I'
 1. 이건
 2. 순서있는 리스트
 
-And some code:
+And some block code:
 
 ```html
 <p>hello <b>world</b></p>
 ```
 
+위 코드 중에서 `p` 태그는 `paragraph`를 나타내기 위해서 사용됩니다.
+
 ---
 
-[^zolawebsite]: Website: [zola](https://getzola.org), GitHub: [getzola/zola](https://github.com/getzola/zola)
+[^zolawebsite]: Zola, is actually "zola zoa". zola is fast and minimal. MINIMAL yet pOWERFUL!
 
-[^hackernews]: Website: [link](https://news.ycombinator.com)
+[^hackernews]: hackernews has a lot of links, updated every hour.
