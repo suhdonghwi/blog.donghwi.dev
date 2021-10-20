@@ -1,3 +1,11 @@
 a {
   color: $theme-color;
 }
+
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid $oc-gray-4;
+
+  margin: 2rem 0;
+}

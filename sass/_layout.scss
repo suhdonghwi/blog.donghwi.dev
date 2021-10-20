@@ -18,11 +18,3 @@ body {
   // to prevent highlighted text spanning entire width of the page
   position: relative;
 }
-
-.separator {
-  height: 0;
-  border: none;
-  border-top: 1px solid $oc-gray-4;
-
-  margin: 2rem 0;
-}

@@ -36,4 +36,39 @@
     border-left: 4px solid $text-primary;
     font-style: italic;
   }
+
+  sup {
+    line-height: 0;
+
+    a {
+      &::before {
+        content: "[";
+      }
+
+      &::after {
+        content: "]";
+      }
+    }
+  }
+
+  .footnote-definition {
+    p {
+      margin: 0;
+    }
+
+    sup {
+      font-size: 1rem;
+      color: $theme-color;
+
+      &::before {
+        content: "[";
+      }
+
+      &::after {
+        content: "]";
+      }
+    }
+
+    margin-bottom: 2rem;
+  }
 }
