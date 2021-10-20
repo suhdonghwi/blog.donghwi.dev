@@ -1,4 +1,21 @@
 {% extends "base.html" %}
 
 <!-- -->
-{% block content %} {{page.content}} {% endblock content %}
+{% block content %}
+<header class="header">
+  <div class="header__title"><em>blog = </em>(print . head) donghwi</div>
+</header>
+
+<hr class="separator" />
+
+<div class="post">
+  <div class="post__header">
+    <h1>{{ page.title }}</h1>
+    <small class="post__date">
+      {{ page.date | date(format="%Y년 %m월 %d일") }}
+    </small>
+  </div>
+
+  {{ page.content | safe }}
+</div>
+{% endblock content %}

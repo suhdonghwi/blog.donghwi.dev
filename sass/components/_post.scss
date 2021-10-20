@@ -1,0 +1,27 @@
+.post {
+  p,
+  li {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  &__date {
+    font-size: 1rem;
+    color: $oc-gray-5;
+  }
+
+  &__header {
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 2.7rem;
+
+    margin: 1rem 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
