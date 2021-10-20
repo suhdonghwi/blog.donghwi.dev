@@ -10,7 +10,7 @@
       text-decoration: none;
     }
 
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     line-height: 2rem;
 
@@ -27,7 +27,10 @@
   }
 
   &__description {
+    font-size: 1.1rem;
     line-height: 1.7rem;
+
+    margin: 0.8rem 0;
   }
 
   & + & {

@@ -1,7 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+@font-face {
+  font-family: "Ubuntu Nanum";
+  src: url("fonts/UbuntuNanum-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu Nanum";
+  src: url("fonts/UbuntuNanum-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
 
 html,
 pre {
-  font-family: "Ubuntu Mono", "Nanum Gothic Coding", monospace;
+  font-family: "Ubuntu Nanum", monospace;
 }
