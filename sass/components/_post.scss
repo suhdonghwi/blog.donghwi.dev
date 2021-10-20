@@ -21,6 +21,10 @@
     margin: 1rem 0;
   }
 
+  h2 {
+    margin-top: 3rem;
+  }
+
   img {
     width: 100%;
   }
@@ -60,8 +64,9 @@
   }
 
   pre.z-code {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     margin: 1.5rem 0;
+    overflow-x: scroll;
 
     border-radius: 5px;
     background-color: $code-background;
