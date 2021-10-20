@@ -1,6 +1,6 @@
 +++
-title = "잘있어, 세상!"
-description = "다양한 요소들을 테스트 하기 위한 시험용 포스트입니다."
+title = "동적 타입 시스템은 더 개방적인 시스템이 아닙니다"
+description = "동적 타입 시스템에 대한 환상과, 정적 타입 시스템에 대한 오해를 해소합니다."
 +++
 
 This site will be a new experiment for me, in order to take blogging a bit more serious than in previou

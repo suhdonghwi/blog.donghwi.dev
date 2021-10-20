@@ -1,1 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+
+html,
+pre {
+  font-family: "Ubuntu Mono", "Nanum Gothic Coding", monospace;
+}
