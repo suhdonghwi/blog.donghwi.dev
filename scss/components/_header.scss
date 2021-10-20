@@ -1,7 +1,7 @@
 .header {
   &__title,
   &__bio {
-    color: $oc-gray-5;
+    color: $text-secondary;
 
     font-weight: 400;
     font-size: 1.3rem;
@@ -9,7 +9,7 @@
     line-height: 2rem;
 
     em {
-      color: $oc-gray-7;
+      color: $text-primary;
 
       font-style: normal;
       font-weight: 500;
