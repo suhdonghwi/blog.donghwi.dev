@@ -20,9 +20,9 @@
     {% for post in section.pages %}
     <li class="post-item">
       <h2 class="post-item__title">{{ post.title }}</h2>
-      <p class="post-item__date">
+      <small class="post-item__date">
         {{ post.date | date(format="%Y년 %m월 %d일") }}
-      </p>
+      </small>
       <p class="post-item__description">{{ post.description }}</p>
     </li>
     {% endfor %}
