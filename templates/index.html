@@ -16,10 +16,14 @@
 <hr class="separator" />
 
 <main>
-  <ol class="posts">
+  <ul class="posts">
     {% for post in section.pages %}
-    <li class="post">{{ post.title }}</li>
+    <li class="post-item">
+      <h2 class="post-item__title">{{ post.title }}</h2>
+      <p class="post-item__date">{{ post.date }}</p>
+      <p class="post-item__description">{{ post.description }}</p>
+    </li>
     {% endfor %}
-  </ol>
+  </ul>
 </main>
 {% endblock content %}
