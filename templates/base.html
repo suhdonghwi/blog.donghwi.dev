@@ -2,11 +2,22 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge; chrome=1" />
+    <!-- Render Chrome if available or using latest version of Internet Explorer (Recommended). -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="https://blog.donghwi.dev/" />
 
     <title>blog.donghwi.dev</title>
 
     <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
+
+    <meta name="theme-color" content="#12b886" />
+    <meta property="og:url" content="https://blog.donghwi.dev/index.html" />
+    <meta property="og:site_name" content="blog = (print . head) donghwi" />
+    <meta property="og:type" content="blog" />
+    <meta name="twitter:card" content="summary" />
+
+    {% block meta %} {% endblock %}
   </head>
 
   <body>

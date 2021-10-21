@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 
 <!-- -->
+{% block meta %}
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.description }}" />
+
+<meta name="twitter:title" content="{{ page.title }}" /> 
+<meta name="twitter:description" content="{{ page.description }}" /> 
+{% endblock %}
+
+<!-- -->
 {% block content %}
 <header class="header">
   <div class="header__title">
