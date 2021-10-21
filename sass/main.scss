@@ -1,8 +1,8 @@
-@import "variables";
-@import "fonts";
-@import "global";
-@import "layout";
-@import "media";
+@import "common/variables";
+@import "common/fonts";
+@import "common/global";
+@import "common/layout";
+@import "common/media";
 
 @import "components/header";
 @import "components/posts";
