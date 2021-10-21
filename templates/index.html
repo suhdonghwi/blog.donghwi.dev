@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 <!-- -->
+{% block meta %}
+<title>{{ config.extra.site_name }}</title>
+{% endblock %}
+
+<!-- -->
 {% block content %}
 <header class="header">
   <div class="header__title"><em>blog</em> = (print . head) donghwi</div>
