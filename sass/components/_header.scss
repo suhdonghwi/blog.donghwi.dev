@@ -32,6 +32,10 @@
       font-style: normal;
       font-weight: 500;
     }
+
+    @include mobile {
+      font-size: 1.1rem;
+    }
   }
 
   &__profile {
