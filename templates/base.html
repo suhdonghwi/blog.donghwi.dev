@@ -15,10 +15,16 @@
     {% set title = "서동휘의 블로그" %}
     <!-- -->
     {% set description = "제가 배우고 느낀 것들을 정리해서 올립니다." %}
+    <!-- -->
+    {% set opengraph_image = get_url(path="images/opengraph-image.png") %}
+
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="{{ opengraph_image }}" />
+
     <meta name="twitter:title" content="{{ title }}" />
     <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image" content="{{ opengraph_image }}" />
     <meta name="twitter:card" content="summary" />
 
     {% block meta %} {% endblock %}
