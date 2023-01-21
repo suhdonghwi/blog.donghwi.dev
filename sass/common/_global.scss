@@ -4,6 +4,10 @@ a {
   color: $theme-color;
 }
 
+p {
+  word-break: keep-all;
+}
+
 hr {
   height: 0;
   border: none;
