@@ -5,6 +5,8 @@
 }
 
 .post-item {
+  word-break: keep-all;
+
   &__title {
     a {
       text-decoration: none;

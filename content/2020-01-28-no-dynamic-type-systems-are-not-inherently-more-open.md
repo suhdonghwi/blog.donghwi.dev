@@ -3,7 +3,7 @@ title = "동적 타입 시스템은 더 개방적인 시스템이 아닙니다"
 description = "동적 타입 시스템에 대한 환상과, 정적 타입 시스템에 대한 오해를 해소합니다."
 +++
 
-> 이 글은 [Alexis King](https://lexi-lambda.github.io/resume.html)님의 블로그에 올라온 [No, dynamic type systems are not inherently more open](https://lexi-lambda.github.io/blog/2020/01/19/no-dynamic-type-systems-are-not-inherently-more-open/)를 한국어로 번역한 글입니다! 원작자의 허락을 받고 올리는 글이며, 저는 번역 작업만 진행하였고 내용에 대한 저작권은 모두 원작자에게 있음을 알립니다.
+> 이 글은 [Alexis King](https://lexi-lambda.github.io/about.html)님의 블로그에 올라온 [No, dynamic type systems are not inherently more open](https://lexi-lambda.github.io/blog/2020/01/19/no-dynamic-type-systems-are-not-inherently-more-open/)를 한국어로 번역한 글입니다! 원작자의 허락을 받고 올리는 글이며, 저는 번역 작업만 진행하였고 내용에 대한 저작권은 모두 원작자에게 있음을 알립니다.
 
 ---
 
@@ -64,15 +64,15 @@ const handleEvent = ({ event_type, data }) => {
   switch (event_type) {
     case "login":
       /* ... */
-      break
+      break;
     case "signup":
       sendEmail(
         data.user.email,
-        `Welcome to Blockchain Emporium, ${data.user.name}!`
-      )
-      break
+        `Welcome to Blockchain Emporium, ${data.user.name}!`,
+      );
+      break;
   }
-}
+};
 ```
 
 이 서비스를 Haskell로 작성해보면 어떨까요? '파싱 하되, 검증하지 않는' Haskell 프로그래머들의 코드는 이렇게 생겼을 것입니다.
@@ -115,9 +115,9 @@ const handleEvent = ({ event_type, data }) => {
   switch (event_type) {
     /* ... */
     default:
-      throw new Error(`unknown event_type: ${event_type}`)
+      throw new Error(`unknown event_type: ${event_type}`);
   }
-}
+};
 ```
 
 하지만 이런 식으로 코드를 작성하지 않았습니다. 왜냐하면 이건 누가 봐도 잘못된 방식이기 때문입니다. 서비스가 알려지지 않은 이벤트를 받으면, 당연히 그냥 무시하는 것이 맞습니다. 이는 Haskell에서도 쉽게 구현할 수 있습니다.
@@ -150,10 +150,10 @@ handleEvent payload = case fromJSON payload of
 우리는 알려지지 않은 데이터를 '무시'함으로써 처리했습니다. 하지만 우리가 프록시 서버 같은 역할의 서비스를 구현하고 있었다고 생각해보면, 이는 잘못된 처리 방식입니다. 예를 들어, 이벤트를 받고, 해킹 시도를 막기 위해 페이로드에 서명 키(signature)를 추가한 다음, 공개 네트워크에 이를 다시 전달해주는 서비스를 만든다고 해봅시다. JavaScript로는 이렇게 구현할 수 있을 것입니다.
 
 ```javascript
-const handleEvent = payload => {
-  const signedPayload = { ...payload, signature: signature(payload) }
-  retransmitEvent(signedPayload)
-}
+const handleEvent = (payload) => {
+  const signedPayload = { ...payload, signature: signature(payload) };
+  retransmitEvent(signedPayload);
+};
 ```
 
 이 경우, 페이로드의 구조에 대해서는 신경을 쓰지 않지만 (`signature` 함수는 모든 JSON 객체에 대해서 동작한다고 합시다) 담겨있는 정보는 그대로 보존을 해야 합니다. 그러면 페이로드를 정밀한 타입에 넣어줘야 하는 정적 타입 언어에서는 이걸 구현할 수 없지 않나요?
@@ -277,10 +277,18 @@ Rich Hickey가 그의 강연에서 정적 타이핑을 비판하며 이를 주 �
 
 [^역주1]: (역주) 이 글의 저자가 이전에 올렸던 포스트 중에 [Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)라는 글이 있습니다. "파싱 하되, 검증하지 말라"는 것인데, 해당 포스트에서 말하는 파싱에 관한 내용이 이 글에서 계속 언급됩니다. 여기에서 말하는 "파서 정신"도 이 내용을 의미하는 것입니다. 그런데 통상적으로 쓰이는 파싱의 의미와는 조금 다르게 쓰여서 혼란스러우실 수 있습니다. 간단하게나마 설명드리자면, '파싱'은 프로그램에 입력이 주어지면 최대한 이른 시점에 입력의 구조를 분석해서 원하는 구조인지 확인하고, 분석 결과를 바탕으로 추가 작업을 수행하는 프로그래밍 방식입니다. 반면 '검증' 방식은 구조를 분석하지 않고 일단 작업을 수행한 다음 예외적인 상황이 생기면 그때 처리를 하는 방식이고, 저자는 이를 안티 패턴으로 간주합니다. 조금 더 자세히 이해하고 싶으시다면 "[Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)"를 한 번 읽어보시는 것을 추천합니다.
 
+<!-- -->
+
 [^역주2]: (역주) 유명한 동적 타입 언어인 Clojure를 설계한 프로그래머입니다.
+
+<!-- -->
 
 [^역주3]: (역주) JSON에서는 정수, 실수, 문자열과 같은 것들을 값(value)이라고 하고, `{}`로 둘러싸여 key, value를 가지는 것들을 객체(object)라고 합니다.
 
+<!-- -->
+
 [^1]: 임의의 문자열을 통해서 `UserId`를 생성하는 것이 완전히 불가능하진 않습니다. `FromJson` 인스턴스를 악용하면 되는데, 이게 그렇게 쉬운 일은 아닙니다. `fromJSON`은 입력 파싱에 실패할 수 있기 때문에, 실패할 경우에 대한 처리 코드도 작성해야 합니다. 그냥 올바른 코드를 작성하는 것이 더 쉬운 경우이므로, 이 함정에 빠지게 될 확률은 굉장히 낮습니다. 어쨌든, 타입 시스템은 여러분이 직접 스스로의 발에 총을 쏘는 것을 막진 않습니다. 그저 올바른 방향으로 안내하는 역할을 할 뿐입니다. (그리고 스스로 자신의 삶을 비참하게 만들고자 하는 프로그래머를 막는 안전장치는 세상에 존재하지도 않습니다.)
+
+<!-- -->
 
 [^2]: 제 생각에 현시점엔 이것이 Haskell의 가장 큰 단점인 것 같습니다.
